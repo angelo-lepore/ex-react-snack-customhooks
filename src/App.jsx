@@ -4,6 +4,8 @@ import useSwitch from "./useSwitch";
 import useDate from "./useDate";
 // Snack 3
 import useCustomPointer from "./useCustomPointer";
+// Bonus
+import useKeyPress from "./useKeyPress";
 
 function App() {
   // Snack 1
@@ -11,7 +13,9 @@ function App() {
   // Snack 2
   const currentDate = useDate();
   // Snack 3
-  const customPointer = useCustomPointer("🔥");
+  const customPointer = useCustomPointer("");
+  // Bonus
+  const isEnterPressed = useKeyPress("Enter");
   return (
     <>
       {/* Snack 1 */}
@@ -31,6 +35,12 @@ function App() {
         <h5 style={{ color: "red" }}>Snack 3</h5>
         <h1>Sposta il mouse per vedere il cursore personalizzato!</h1>
         {customPointer}
+      </div>
+      {/* Bonus */}
+      <div>
+        <h5 style={{ color: "red" }}>Bonus</h5>
+        <h1>Tieni premuto "Enter" per testare il custom hook</h1>
+        <p>{isEnterPressed ? "Enter premuto! ✅" : "Aspettando input... ⌨️"}</p>
       </div>
     </>
   );
