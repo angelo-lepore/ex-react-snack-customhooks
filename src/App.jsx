@@ -3,7 +3,7 @@ import useSwitch from "./useSwitch";
 // Snack 2
 import useDate from "./useDate";
 // Snack 3
-// import useCustomPointer from "./useCustomPointer";
+import useCustomPointer from "./useCustomPointer";
 
 function App() {
   // Snack 1
@@ -11,7 +11,7 @@ function App() {
   // Snack 2
   const currentDate = useDate();
   // Snack 3
-  // const customPointer = useCustomPointer("🔥");
+  const customPointer = useCustomPointer("🔥");
   return (
     <>
       {/* Snack 1 */}
@@ -30,7 +30,7 @@ function App() {
       <div>
         <h5 style={{ color: "red" }}>Snack 3</h5>
         <h1>Sposta il mouse per vedere il cursore personalizzato!</h1>
-        {/* {customPointer} */}
+        {customPointer}
       </div>
     </>
   );
