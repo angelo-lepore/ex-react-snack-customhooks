@@ -1,7 +1,7 @@
 // Snack 1
 import useSwitch from "./useSwitch";
 // Snack 2
-// import useDate from "./useDate";
+import useDate from "./useDate";
 // Snack 3
 // import useCustomPointer from "./useCustomPointer";
 
@@ -9,7 +9,7 @@ function App() {
   // Snack 1
   const [isOn, toggle] = useSwitch();
   // Snack 2
-  // const currentDate = useDate();
+  const currentDate = useDate();
   // Snack 3
   // const customPointer = useCustomPointer("🔥");
   return (
@@ -24,7 +24,7 @@ function App() {
       <div>
         <h5 style={{ color: "red" }}>Snack 2</h5>
         <h1>Data e ora attuali:</h1>
-        {/* <p>{currentDate.toLocaleString()}</p> */}
+        <p>{currentDate.toLocaleString()}</p>
       </div>
       {/* Snack 3 */}
       <div>
